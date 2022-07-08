@@ -37,6 +37,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   `,
     { slug: params?.slug }
   )
+  const time = new Date().toLocaleTimeString()
+  console.log(`Data from ${time}`, data)
   return {
     props: {
       data,
